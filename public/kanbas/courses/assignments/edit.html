@@ -1,0 +1,201 @@
+<table width="100%">
+  <tr valign="top">
+    <!-- COLUMN 1
+            Only the links Account, Profile, Courses, Home, Assignments, and Grades-->
+    <td>
+      <ul>
+        <li><a href="/public/kanbas/accountnav.html">Account</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="/public/kanbas/coursesnav.html">Courses</a></li>
+        <li><a href="#">Calendar</a></li>
+        <li><a href="#">Inbox</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Studio</a></li>
+        <li><a href="#">Commons</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </td>
+
+    <!-- COLUMN 2 
+        Only the links Account, Profile, Courses, Home, Assignments, and Grades-->
+    <td>
+      <ul>
+        <li><a href="/public/kanbas/home.html">Home</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a href="#">Piazza</a></li>
+        <li><a href="#">Zoom Meetings</a></li>
+        <li><a href="index.html">Assignments</a></li>
+        <li><a href="#">Quizzes</a></li>
+        <li><a href="/public/kanbas/grades.html">Grades</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Panopto Video</a></li>
+        <li><a href="#">Discussions</a></li>
+        <li><a href="#">Announcements</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Files</a></li>
+        <li><a href="#">Rubrics</a></li>
+        <li><a href="#">Outcomes</a></li>
+        <li><a href="#">Collaborations</a></li>
+        <li><a href="#">Syllabus</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </td>
+
+    <!-- COLUMN 3-->
+    <td>
+      <select id="edit-select">
+        <option selected value="SPEEDGRADER">SpeedGrader</option>
+        <option value="EDIT">Edit</option>
+        <option value="DUPLICATE">Duplicate</option>
+        <option value="DELETE">Delete</option>
+        <option value="MOVE">Move To...</option>
+        <option value="SEND">Send To...</option>
+        <option value="COPY">Copy To...</option>
+        <option value="SHARE">Share to Commons</option>
+      </select>
+      <hr />
+
+      <h3>Assignment Name</h3>
+      <br />
+      <input
+        id="text-fields-assignment-name"
+        placeholder="A1 - ENV + HTML"
+      /><br />
+      <br />
+      <textarea cols="30" rows="2">
+This is the assignment description.</textarea
+      >
+      <br />
+      <br />
+      <label for="text-fields-points"> Points </label> <br />
+      <input type="points" placeholder="100" id="text-fields-points" /><br />
+      <br />
+      <label for="assignment-group-select">Assignment Group</label> <br />
+      <select id="assignment-group-select">
+        <option selected value="ASSIGNMENTS">ASSIGNMENTS</option>
+      </select>
+      <br />
+      <br />
+      <label for="display-grade-as">Display Grade as</label> <br />
+      <select id="display-grade-as-select">
+        <option selected value="DISPLAY-GRADE-AS">Percentage</option>
+      </select>
+      <br />
+      <br />
+
+      <!--input fields of type date to implement the fields Due, Available from, and Until. 
+        Cancel or Save buttons should navigate back to the assignment screen.
+-->
+      <label for="submission-type-select">Submission Type</label> <br />
+      <select id="submission-type-select">
+        <option selected value="ONLINE">Online</option>
+      </select>
+      <br />
+      <br />
+
+      <!--ONLINE ENTRY OPTIONS-->
+      <label>Online Entry Options</label>
+      <br />
+      <input
+        type="checkbox"
+        value="TEXT-ENTRY"
+        name="check-entry"
+        id="chkbox-text-entry"
+      />
+      <label for="chkbox-text-entry">Text Entry</label> <br />
+      <input
+        type="checkbox"
+        value="WEBSITE-URL"
+        name="check-entry"
+        id="chkbox-website-url"
+      />
+      <label for="chkbox-text-entry">Website URL</label> <br />
+      <input
+        type="checkbox"
+        value="MEDIA-RECORDINGS"
+        name="check-entry"
+        id="chkbox-media-recordings"
+      />
+      <label for="chkbox-media-recordings">Media Recordings</label> <br />
+      <input
+        type="checkbox"
+        value="STUDENT-ANNOTATION"
+        name="check-entry"
+        id="chkbox-student-annotation"
+      />
+      <label for="chkbox-student-annotation">Student Annotation</label> <br />
+      <input
+        type="checkbox"
+        value="FILE-UPLOADS"
+        name="check-entry"
+        id="chkbox-file-uploads"
+      />
+      <label for="chkbox-file-uploads">File Uploads</label> <br />
+      <br />
+
+      <!-- END OF ONLINE ENTRY OPTIONS -->
+
+      <label for="submission-attempts-select">Submission Attempts</label> <br />
+      <select id="submission-attempts-select">
+        <option selected value="UNLIMITED">Unlimited</option>
+      </select>
+      <br />
+      <br />
+
+      <label for="plagiarism-review-select">Plagiarism Review</label> <br />
+      <select id="plagiarism-review-select">
+        <option selected value="NONE">None</option>
+      </select>
+      <br />
+      <br />
+
+      <label>Group Assignment</label>
+      <br />
+      <input
+        type="checkbox"
+        value="GROUP-ASSIGNMENT"
+        name="check-entry"
+        id="chkbox-group-assignment"
+      />
+      <label for="chkbox-group-assignment">This is a group assignment</label>
+      <br />
+      <br />
+
+      <label>Peer Reviews</label>
+      <br />
+      <input
+        type="checkbox"
+        value="PEER-REVIEWS"
+        name="check-entry"
+        id="chkbox-peer-reviews"
+      />
+      <label for="chkbox-peer-reviews">Require Peer Reviews</label> <br />
+      <br />
+      <label>Assign</label> <br />
+      <label for="text-fields-assign-to">Assign To</label> <br />
+      <input id="text-fields-assign-to" placeholder="Everyone" /><br />
+      <br />
+
+      <label for="text-fields-due"> Due <br /> </label>
+      <input type="date" id="text-fields-due" value="2021-01-01" /><br />
+      <br />
+
+      <label for="text-fields-available-from">Available from <br /> </label>
+      <input type="date" id="text-fields-available-from" value="2021-01-01" />
+      <br />
+      <br />
+
+      <label for="text-fields-until">Until <br /> </label>
+      <input type="date" id="text-fields-until" value="2021-01-01" />
+      <br />
+      <br />
+
+      <button type="button">
+        <a href="index.html">Cancel</a>
+      </button>
+      <button type="button">
+        <a href="index.html">Save</a>
+      </button>
+    </td>
+  </tr>
+</table>
