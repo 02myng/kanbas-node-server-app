@@ -1,176 +1,421 @@
-<table width="100%">
-  <tr valign="top">
-    <!-- COLUMN 1
-          Only the links Account, Profile, Courses, Home, Assignments, and Grades-->
-    <td>
-      <ul>
-        <li><a href="/kanbas/accountnav.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="/kanbas/coursesnav.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </td>
+<head>
+  <link href="/public/kanbas/dashboard.css" rel="stylesheet" />
 
-    <!-- COLUMN 2 
-      Only the links Account, Profile, Courses, Home, Assignments, and Grades-->
-    <td>
-      <ul>
-        <li><a href="/kanbas/home.html">Home</a></li>
-        <li><a href="#">Modules</a></li>
-        <li><a href="#">Piazza</a></li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li><a href="index.html">Assignments</a></li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="/kanbas/grades.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panopto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </td>
+  <link
+    href="/public/vendors/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link href="/public/vendors/fontawesome/css/all.css" />
+  <link
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="flex-container">
+    <div class="row">
+      <!-- NAV BAR -->
+      <div class="col-1 black-bg d-none d-sm-none d-md-block">
+        <div class="navbar">
+          <!-- crop the logo at the top later-->
+          <img
+            src="/public/images/northeasternlogo.png"
+            width="85"
+            height="85"
+          />
 
-    <!-- COLUMN 3-->
-    <td>
-      <!-- BUTTONS-->
-      <input
-        id="text-fields-assignments"
-        placeholder="Search for Assignments"
-      />
-      <button type="button">Group</button>
-      <button type="assignment">Assignment</button>
-      <select id="edit-date">
-        <option selected value="EDIT-DATE">Edit Assignment Date</option>
-      </select>
-      <hr />
+          <div class="padding-fat">
+            <a href="/public/kanbas/profile/index.html" class="white-link">
+              <i class="fa fa-user-circle fa-2x" style="color: white"></i>
+              Account
+            </a>
+          </div>
 
-      <!-- CONTENT-->
-      <h3>
-        ASSIGNMENTS 40% of TOTAL
-        <select id="edit-select">
-          <option selected value="EDIT">Edit</option>
-          <option value="SPEEDGRADER">Speed Grader</option>
-          <option value="DUPLICATE">Duplicate</option>
-          <option value="DELETE">Delete</option>
-          <option value="MOVE">Move To...</option>
-          <option value="SEND">Send To...</option>
-          <option value="COPY">Copy To...</option>
-          <option value="SHARE">Share to Commons</option>
-        </select>
-      </h3>
-      <ul>
-        <li>
-          <a href="edit.html">A1 - ENV + HTML</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="edit.html">A2 - CSS + BOOTSTRAP</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="edit.html">A3 - JS + REACT</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="edit.html">A4 - STATE + REDUX</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="edit.html">A5 - NODE + SESSION</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="edit.html">A6 - MONGO + MONGOOSE</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-      </ul>
+          <div class="padding-fat">
+            <a
+              href="/public/kanbas/dashboard.html"
+              class="navbar-item white-link"
+              style="text-decoration: none !important"
+            >
+              <i class="fas fa-tachometer-alt fa-2x" style="color: #e0061f"></i>
+              <br />
 
-      <h3>
-        QUIZZES 10% of TOTAL
-        <select id="edit-select">
-          <option selected value="EDIT">Edit</option>
-          <option value="SPEEDGRADER">Speed Grader</option>
-          <option value="DUPLICATE">Duplicate</option>
-          <option value="DELETE">Delete</option>
-          <option value="MOVE">Move To...</option>
-          <option value="SEND">Send To...</option>
-          <option value="COPY">Copy To...</option>
-          <option value="SHARE">Share to Commons</option>
-        </select>
-      </h3>
-      <ul>
-        <li>
-          <a href="#">Q1 - HTML</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="#">Q2 - CSS</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="#">Q3 - NODE</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="#">Q4 - MONGO</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-      </ul>
+              Dashboard
+            </a>
+            <br />
+          </div>
 
-      <h3>
-        EXAMS 20% of TOTAL
-        <select id="edit-select">
-          <option selected value="EDIT">Edit</option>
-          <option value="SPEEDGRADER">Speed Grader</option>
-          <option value="DUPLICATE">Duplicate</option>
-          <option value="DELETE">Delete</option>
-          <option value="MOVE">Move To...</option>
-          <option value="SEND">Send To...</option>
-          <option value="COPY">Copy To...</option>
-          <option value="SHARE">Share to Commons</option>
-        </select>
-      </h3>
-      <ul>
-        <li>
-          <a href="#">Midterm</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-          <a href="#">Final</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-      </ul>
+          <div class="padding-fat">
+            <div class="active">
+              <a href="/public/kanbas/home.html" class="active">
+                <i class="fa fa-book fa-2x" style="color: #e0061f"></i>
+                Courses</a
+              >
+            </div>
+          </div>
 
-      <h3>
-        PROJECT 30% of TOTAL
-        <select id="edit-select">
-          <option selected value="EDIT">Edit</option>
-          <option value="SPEEDGRADER">Speed Grader</option>
-          <option value="DUPLICATE">Duplicate</option>
-          <option value="DELETE">Delete</option>
-          <option value="MOVE">Move To...</option>
-          <option value="SEND">Send To...</option>
-          <option value="COPY">Copy To...</option>
-          <option value="SHARE">Share to Commons</option>
-        </select>
-      </h3>
-      <ul>
-        <li>
-          <a href="#">Project</a><br />
-          <a href="#">Multiple Modules</a> | Not Available Yet
-        </li>
-      </ul>
-    </td>
-  </tr>
-</table>
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i class="fa fa-calendar fa-2x" style="color: #e0061f"></i>
+              Calendar</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a
+              href="#"
+              class="navbar-item white-link"
+              style="padding-left: 25px"
+              style="text-align: center"
+            >
+              <i class="fa fa-envelope-open fa-2x" style="color: #e0061f"></i>
+              <br />
+              Inbox</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i class="fa fa-clock fa-2x" style="color: #e0061f"></i>
+              History</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i class="fa fa-tv fa-2x" style="color: #e0061f"></i>
+              Studio</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i
+                class="fa fa-arrow-alt-circle-right fa-2x"
+                style="color: #e0061f"
+              ></i>
+              Commons</a
+            >
+          </div>
+          <div class="padding-fat">
+            <a
+              href="#"
+              style="padding-left: 25px"
+              style="text-align: center"
+              class="white-link"
+            >
+              <i class="fa fa-question-circle fa-2x" style="color: #e0061f"></i>
+              <br />
+              Help</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- home nav links -->
+      <div class="col-10" style="flex: 1">
+        <div class="row">
+          <div style="margin: 20px" class="d-none d-md-none d-lg-block">
+            <i
+              class="fa fa-bars fa-2x"
+              style="color: #e0061f; white-space: nowrap"
+            ></i>
+            &nbsp;
+            <nav
+              aria-label="breadcrumb"
+              style="--bs-breadcrumb-divider: '>'; display: inline-block"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/public/kanbas/home.html" class="active"
+                    >CS4530.19753.202410</a
+                  >
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Assignments
+                </li>
+              </ol>
+            </nav>
+            <button
+              class="btn btn-secondary float-end"
+              style="margin-right: 20px"
+            >
+              Student View
+            </button>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row">
+          <div
+            class="col-2 sidebar d-none d-md-none d-lg-block"
+            style="width: 140px"
+          >
+            <a href="/public/kanbas/home.html" class="sidebar-item">Home</a
+            ><br />
+            <a href="#" class="sidebar-item">Modules</a><br />
+            <a href="#" class="sidebar-item">Piazza</a><br />
+            <a href="#" class="sidebar-item">Zoom Meetings</a><br />
+            <a href="index.html" class="sidebar-item-active">Assignments</a
+            ><br />
+            <a href="#" class="sidebar-item">Quizzes</a><br />
+            <a href="/public/kanbas/grades.html" class="sidebar-item">Grades</a
+            ><br />
+            <a href="#" class="sidebar-item">People</a><br />
+            <a href="#" class="sidebar-item">Panopto Video</a><br />
+            <a href="#" class="sidebar-item">Discussions</a><br />
+            <a href="#" class="sidebar-item">Announcements</a><br />
+            <a href="#" class="sidebar-item">Pages</a><br />
+            <a href="#" class="sidebar-item">Files</a><br />
+            <a href="#" class="sidebar-item">Rubrics</a><br />
+            <a href="#" class="sidebar-item">Outcomes</a><br />
+            <a href="#" class="sidebar-item">Collaborations</a><br />
+            <a href="#" class="sidebar-item">Syllabus</a><br />
+            <a href="#" class="sidebar-item">Settings</a><br />
+          </div>
+
+          <!-- END OF NAV/SIDEBAR -->
+          <div class="col-10" style="flex-grow: 1">
+            <div>
+              <input
+                type="text"
+                placeholder="Search for Assignment"
+                style="width: 300px; padding: 10px"
+              />
+
+              <button
+                class="btn btn-secondary btn-lg float-end"
+                style="margin-left: 5px"
+              >
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn-danger float-end" style="margin-left: 5px">
+                <i class="fas fa-plus"></i>
+                Assignment
+              </button>
+
+              <button
+                class="btn btn-secondary float-end"
+                style="margin-left: 5px"
+              >
+                <i class="fas fa-plus"></i>
+                Group
+              </button>
+            </div>
+
+            <div class="list-group" style="display: block">
+              <hr />
+              <div class="list-group-item list-group-item-secondary">
+                <i
+                  class="fa fa-ellipsis-v float-end"
+                  aria-hidden="true"
+                  style="margin-left: 20px"
+                ></i>
+                <i class="fas fa-plus float-end"></i>
+                <span class="box float-end"> 40% of total </span>
+                <span style="font-weight: bold">Assignments</span>
+              </div>
+
+              <div class="list-group-item" style="padding: 20px">
+                <div
+                  style="
+                    vertical-align: middle;
+                    display: inline;
+                    margin-top: 150px;
+                  "
+                  class="align-middle"
+                >
+                  <i
+                    class="fa fa-ellipsis-v float-end align-middle"
+                    aria-hidden="true"
+                    style="margin-left: 10px; margin-top: 30px"
+                  ></i>
+                  <i
+                    class="fas fa-check-circle float-end align-middle"
+                    style="color: green; margin-top: 30px"
+                  ></i>
+
+                  <i
+                    class="fas fa-book fa-lg float-start"
+                    style="margin-top: 30px; color: green"
+                  ></i>
+                </div>
+
+                <div class="deadline">
+                  <a href="edit.html" class="black-link">A1 SETUP</a><br />
+                  Week 0 - SETUP | Week starting Monday September 5th
+                  (09/5/2022) Module<br />
+                  Due Sep 18,2022 at 11:59pm | 100pts
+                </div>
+              </div>
+
+              <div class="list-group-item" style="padding: 20px">
+                <div
+                  style="
+                    vertical-align: middle;
+                    display: inline;
+                    margin-top: 150px;
+                  "
+                  class="align-middle"
+                >
+                  <i
+                    class="fa fa-ellipsis-v float-end align-middle"
+                    aria-hidden="true"
+                    style="margin-left: 10px; margin-top: 30px"
+                  ></i>
+                  <i
+                    class="fas fa-check-circle float-end align-middle"
+                    style="color: green; margin-top: 30px"
+                  ></i>
+
+                  <i
+                    class="fas fa-book fa-lg float-start"
+                    style="margin-top: 30px; color: green"
+                  ></i>
+                </div>
+
+                <div class="deadline">
+                  <a href="edit.html" class="black-link">A2 HTML</a><br />
+                  Week 1 - HTML | Week starting Monday September 12th
+                  (09/12/2022) Module<br />
+                  Due Sep 25,2022 at 11:59pm | 100pts
+                </div>
+              </div>
+
+              <div class="list-group-item" style="padding: 20px">
+                <div
+                  style="
+                    vertical-align: middle;
+                    display: inline;
+                    margin-top: 150px;
+                  "
+                  class="align-middle"
+                >
+                  <i
+                    class="fa fa-ellipsis-v float-end align-middle"
+                    aria-hidden="true"
+                    style="margin-left: 10px; margin-top: 30px"
+                  ></i>
+                  <i
+                    class="fas fa-check-circle float-end align-middle"
+                    style="color: green; margin-top: 30px"
+                  ></i>
+
+                  <i
+                    class="fas fa-book fa-lg float-start"
+                    style="margin-top: 30px; color: green"
+                  ></i>
+                </div>
+
+                <div class="deadline">
+                  <a href="edit.html" class="black-link">A3 CSS</a><br />
+                  Week 2 - CSS | Week starting Monday September 19th
+                  (09/19/2022) Module<br />
+                  Due Oct 2,2022 at 11:59pm | 100pts
+                </div>
+              </div>
+
+              <div class="list-group-item" style="padding: 20px">
+                <div
+                  style="
+                    vertical-align: middle;
+                    display: inline;
+                    margin-top: 150px;
+                  "
+                  class="align-middle"
+                >
+                  <i
+                    class="fa fa-ellipsis-v float-end align-middle"
+                    aria-hidden="true"
+                    style="margin-left: 10px; margin-top: 30px"
+                  ></i>
+                  <i
+                    class="fas fa-check-circle float-end align-middle"
+                    style="color: green; margin-top: 30px"
+                  ></i>
+
+                  <i
+                    class="fas fa-book fa-lg float-start"
+                    style="margin-top: 30px; color: green"
+                  ></i>
+                </div>
+
+                <div class="deadline">
+                  <a href="edit.html" class="black-link">A4 BOOTSTRAP</a><br />
+                  Week 3 - BOOTSTRAP | Week starting Monday September 26th
+                  (09/26/2022) Module<br />
+                  Due Oct 10,2022 at 11:59pm | 100pts
+                </div>
+              </div>
+
+              <div class="list-group-item" style="padding: 20px">
+                <div
+                  style="
+                    vertical-align: middle;
+                    display: inline;
+                    margin-top: 150px;
+                  "
+                  class="align-middle"
+                >
+                  <i
+                    class="fa fa-ellipsis-v float-end align-middle"
+                    aria-hidden="true"
+                    style="margin-left: 10px; margin-top: 30px"
+                  ></i>
+                  <i
+                    class="fas fa-check-circle float-end align-middle"
+                    style="color: green; margin-top: 30px"
+                  ></i>
+
+                  <i
+                    class="fas fa-book fa-lg float-start"
+                    style="margin-top: 30px; color: green"
+                  ></i>
+                </div>
+
+                <div class="deadline">
+                  <a href="edit.html" class="black-link">A5 JAVASCRIPT</a><br />
+                  Week 4 - Javascript | Week starting Monday October 3rd
+                  (10/3/2022) Module<br />
+                  Due Oct 16,2022 at 11:59pm | 100pts
+                </div>
+              </div>
+
+              <div class="list-group-item" style="padding: 20px">
+                <div
+                  style="
+                    vertical-align: middle;
+                    display: inline;
+                    margin-top: 150px;
+                  "
+                  class="align-middle"
+                >
+                  <i
+                    class="fa fa-ellipsis-v float-end align-middle"
+                    aria-hidden="true"
+                    style="margin-left: 10px; margin-top: 30px"
+                  ></i>
+                  <i
+                    class="fas fa-check-circle float-end align-middle"
+                    style="color: green; margin-top: 30px"
+                  ></i>
+
+                  <i
+                    class="fas fa-book fa-lg float-start"
+                    style="margin-top: 30px; color: green"
+                  ></i>
+                </div>
+
+                <div class="deadline">
+                  <a href="edit.html" class="black-link">A6 REACT</a><br />
+                  Week 5 - React & Routing | Week starting Monday October 10th
+                  (10/10/2022) Module <br />
+                  Due Oct 23,2022 at 11:59pm | 100pts
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

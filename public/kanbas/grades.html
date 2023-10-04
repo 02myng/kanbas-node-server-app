@@ -1,154 +1,341 @@
-<table width="100%">
-  <tr valign="top">
-    <!-- COLUMN 1
-        Only the links Account, Profile, Courses, Home, Assignments, and Grades-->
-    <td>
-      <ul>
-        <li><a href="accountnav.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="coursesnav.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </td>
+<head>
+  <link href="/public/kanbas/dashboard.css" rel="stylesheet" />
 
-    <!-- COLUMN 2 
-    Only the links Account, Profile, Courses, Home, Assignments, and Grades-->
-    <td>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="#">Modules</a></li>
-        <li><a href="#">Piazza</a></li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li>
-          <a href="/kanbas/assignments/index.html">Assignments</a>
-        </li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="grades.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panopto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </td>
+  <link
+    href="/public/vendors/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <title>Grades</title>
 
-    <!-- COLUMN 3-->
-    <td>
-      <select id="gradebook-select">
-        <option selected value="GRADEBOOK">Gradebook</option>
-      </select>
-      <button type="button">Import</button>
-      <select id="export-select">
-        <option selected value="EXPORT">Export</option>
-      </select>
-      <button type="button">Configure</button>
-      <h2>Student Names</h2>
-      <input
-        type="students"
-        placeholder="Search Students"
-        id="text-fields-students"
-      />
-      <h2>Assignment Names</h2>
-      <input
-        type="assignments"
-        placeholder="Search Assignments"
-        id="text-fields-assignments"
-      />
-      <br />
-      <br />
-      <button type="button">Apply Filters</button>
+  <link href="/public/vendors/fontawesome/css/all.css" />
+  <link
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="flex-container">
+    <div class="row">
+      <!-- NAV BAR -->
+      <div class="col-1 black-bg d-none d-sm-none d-md-block">
+        <div class="navbar">
+          <!-- crop the logo at the top later-->
+          <img
+            src="/public/images/northeasternlogo.png"
+            width="85"
+            height="85"
+          />
 
-      <br />
-      <br />
+          <div class="padding-fat">
+            <a href="./profile/index.html" class="white-link">
+              <i class="fa fa-user-circle fa-2x" style="color: white"></i>
+              Account
+            </a>
+          </div>
 
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Student Name</th>
-            <th>
-              A1 SETUP <br />
-              Out of 100
-            </th>
-            <th>A2 HTML <br />Out of 100</th>
-            <th>A3 HTML <br />Out of 100</th>
-            <th>A4 BOOTSTRAP <br />Out of 100</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Only need 4 students and 4 assignments. Some of the grades must be input fields -->
-          <tr>
-            <td>Alice Wonderland</td>
-            <td style="text-align: center">98</td>
-            <td style="text-align: center">89</td>
-            <td>
-              <input
-                style="text-align: center"
-                type="number"
-                id="text-field-grade"
-                placeholder="87"
-                value="87"
-              />
-            </td>
-            <td style="text-align: center">90</td>
-          </tr>
-          <tr>
-            <td>Princes Leia</td>
-            <td style="text-align: center">98</td>
-            <td>
-              <input
-                style="text-align: center"
-                type="number"
-                id="text-field-grade"
-                placeholder="80"
-                value="80"
-              />
-            </td>
-            <td style="text-align: center">87</td>
-            <td style="text-align: center">86</td>
-          </tr>
-          <tr>
-            <td>Luke Skywalker</td>
-            <td style="text-align: center">
-              <input
-                style="text-align: center"
-                type="number"
-                id="text-field-grade"
-                placeholder="99"
-                value="99"
-              />
-            </td>
-            <td style="text-align: center">88</td>
-            <td style="text-align: center">97</td>
-            <td style="text-align: center">82</td>
-          </tr>
-          <tr>
-            <td>Boba Fet</td>
-            <td style="text-align: center">85</td>
-            <td style="text-align: center">89</td>
-            <td style="text-align: center">94</td>
-            <td>
-              <input
-                style="text-align: center"
-                type="number"
-                id="text-field-grade"
-                placeholder="83"
-                value="83"
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-</table>
+          <div class="padding-fat">
+            <a
+              href="dashboard.html"
+              class="navbar-item white-link"
+              style="text-decoration: none !important"
+            >
+              <i class="fas fa-tachometer-alt fa-2x" style="color: #e0061f"></i>
+              <br />
+
+              Dashboard
+            </a>
+            <br />
+          </div>
+
+          <div class="padding-fat">
+            <div class="active">
+              <a href="./home.html" class="active">
+                <i class="fa fa-book fa-2x" style="color: #e0061f"></i>
+                Courses</a
+              >
+            </div>
+          </div>
+
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i class="fa fa-calendar fa-2x" style="color: #e0061f"></i>
+              Calendar</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a
+              href="#"
+              class="navbar-item white-link"
+              style="padding-left: 25px"
+              style="text-align: center"
+            >
+              <i class="fa fa-envelope-open fa-2x" style="color: #e0061f"></i>
+              <br />
+              Inbox</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i class="fa fa-clock fa-2x" style="color: #e0061f"></i>
+              History</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i class="fa fa-tv fa-2x" style="color: #e0061f"></i>
+              Studio</a
+            >
+          </div>
+
+          <div class="padding-fat">
+            <a href="#" class="white-link">
+              <i
+                class="fa fa-arrow-alt-circle-right fa-2x"
+                style="color: #e0061f"
+              ></i>
+              Commons</a
+            >
+          </div>
+          <div class="padding-fat">
+            <a
+              href="#"
+              style="padding-left: 25px"
+              style="text-align: center"
+              class="white-link"
+            >
+              <i class="fa fa-question-circle fa-2x" style="color: #e0061f"></i>
+              <br />
+              Help</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- home nav links -->
+      <div class="col-10" style="flex: 1">
+        <div class="row">
+          <div style="margin: 20px" class="d-none d-md-none d-lg-block">
+            <i
+              class="fa fa-bars fa-2x"
+              style="color: #e0061f; white-space: nowrap"
+            ></i>
+            &nbsp;
+            <nav
+              aria-label="breadcrumb"
+              style="--bs-breadcrumb-divider: '>'; display: inline-block"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="home.html" class="active">CS4530.19753.202410</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Grades
+                </li>
+              </ol>
+            </nav>
+            <button
+              class="btn btn-secondary float-end"
+              style="margin-right: 20px"
+            >
+              Student View
+            </button>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row">
+          <div
+            class="col-2 sidebar d-none d-md-none d-lg-block"
+            style="width: 140px"
+          >
+            <a href="home.html" class="sidebar-item">Home</a><br />
+            <a href="#" class="sidebar-item">Modules</a><br />
+            <a href="#" class="sidebar-item">Piazza</a><br />
+            <a href="#" class="sidebar-item">Zoom Meetings</a><br />
+            <a href="/public/kanbas/assignments/index.html" class="sidebar-item"
+              >Assignments</a
+            ><br />
+            <a href="#" class="sidebar-item">Quizzes</a><br />
+            <a href="grades.html" class="sidebar-item-active">Grades</a><br />
+            <a href="#" class="sidebar-item">People</a><br />
+            <a href="#" class="sidebar-item">Panopto Video</a><br />
+            <a href="#" class="sidebar-item">Discussions</a><br />
+            <a href="#" class="sidebar-item">Announcements</a><br />
+            <a href="#" class="sidebar-item">Pages</a><br />
+            <a href="#" class="sidebar-item">Files</a><br />
+            <a href="#" class="sidebar-item">Rubrics</a><br />
+            <a href="#" class="sidebar-item">Outcomes</a><br />
+            <a href="#" class="sidebar-item">Collaborations</a><br />
+            <a href="#" class="sidebar-item">Syllabus</a><br />
+            <a href="#" class="sidebar-item">Settings</a><br />
+          </div>
+
+          <!-- END OF NAV/SIDEBAR -->
+
+          <div class="col-8">
+            <div class="row">
+              <div style="display: inline; margin-bottom: 15px">
+                <button
+                  class="btn btn-secondary float-end"
+                  style="
+                    display: inline;
+                    background-color: lightgrey;
+                    border-color: lightgrey;
+                  "
+                >
+                  <i class="fas fa-cog fa-2x" style="color: black"></i>
+                </button>
+
+                <div
+                  class="dropdown float-end"
+                  style="padding-left: 10px; padding-right: 10px"
+                >
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    style="
+                      background-color: lightgrey;
+                      border-color: lightgrey;
+                      color: black;
+                    "
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i
+                      class="fas fa-file-export fa-2x"
+                      style="color: black"
+                    ></i>
+                    Export
+                  </button>
+                </div>
+
+                <button
+                  class="btn btn-secondary float-end"
+                  style="
+                    display: inline;
+                    background-color: lightgrey;
+                    border-color: lightgrey;
+                    color: black;
+                  "
+                >
+                  <i class="fas fa-file-import fa-2x"></i>
+                  Import
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <label style="font-weight: bold">Student Names</label><br />
+                <input
+                  type="search"
+                  style="margin-top: 10px"
+                  class="form-control"
+                  placeholder="Search Students"
+                  aria-label="SearchStudents"
+                />
+              </div>
+
+              <div class="col-6">
+                <label style="font-weight: bold">Assignment Names</label><br />
+                <input
+                  type="search"
+                  style="margin-top: 10px"
+                  class="form-control"
+                  placeholder="Search Assignments"
+                  aria-label="SearchAssignments"
+                />
+              </div>
+            </div>
+
+            <button
+              class="btn btn-secondary"
+              style="
+                display: inline;
+                margin-top: 20px;
+                background-color: lightgrey;
+                border-color: lightgrey;
+                color: black;
+              "
+            >
+              <i class="fas fa-filter"></i>
+              Apply Filters
+            </button>
+
+            <div style="margin-top: 20px">
+              <table
+                class="table table-striped"
+                style="
+                  border: solid;
+                  border-color: lightgrey;
+                  text-align: center;
+                "
+              >
+                <thead>
+                  <tr>
+                    <th>Student Name</th>
+                    <th>
+                      A1 SETUP <br />
+                      Out of 100
+                    </th>
+                    <th>
+                      A2 HTML<br />
+                      Out of 100
+                    </th>
+                    <th>
+                      A3 CSS<br />
+                      Out of 100
+                    </th>
+                    <th>
+                      A4 BOOTSTRAP<br />
+                      Out of 100
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="active" style="color: #e0061f">Gojou Satoru</td>
+                    <td style="width: 15%">
+                      <input
+                        type="number"
+                        class="form-control"
+                        value="91"
+                        style="width: 60%"
+                      />
+                    </td>
+                    <td>100</td>
+                    <td>80</td>
+                    <td>96.5</td>
+                  </tr>
+                  <tr>
+                    <td class="active">Snor Lax</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+                    <td class="active" style="color: #e0061f">Dit to</td>
+                    <td>76</td>
+                    <td>84</td>
+                    <td>70</td>
+                    <td>94</td>
+                  </tr>
+                  <tr>
+                    <td class="active">Squi Rtle</td>
+                    <td>82.5</td>
+                    <td>98</td>
+                    <td>91.5</td>
+                    <td>90</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
