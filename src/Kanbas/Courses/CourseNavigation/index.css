@@ -1,0 +1,21 @@
+.course-nav {
+  text-align: left;
+}
+
+.course-nav a:hover {
+  text-decoration: underline;
+}
+
+.course-nav a.active {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  border-left: 2px black solid;
+}
+
+.course-nav .list-group-item {
+  height: 40px;
+  border: none;
+  color: red;
+  padding-left: 5px;
+}

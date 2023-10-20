@@ -1,0 +1,34 @@
+.courses {
+  width: 95vw;
+}
+
+.icon {
+  color: red;
+}
+
+.breadcrumb {
+  align-items: center;
+  margin-top: 3px;
+}
+
+.breadcrumb-link {
+  color: red;
+  text-decoration: none;
+  font-size: large;
+}
+
+.breadcrumb-link:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.breadcrumb .active {
+  color: grey;
+  font-size: large;
+}
+
+.breadcrumb .active::before {
+  color: grey;
+  font-size: small;
+  margin-top: 3px;
+}

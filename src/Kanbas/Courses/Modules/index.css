@@ -1,0 +1,22 @@
+.modules {
+  width: 70vw;
+}
+
+.modules .row {
+  width: 70vw;
+  justify-content: right;
+}
+
+.add-module {
+  width: 110px;
+}
+
+.module-title {
+  background-color: white;
+}
+
+.border-left-active {
+  border-left-style: solid;
+  border-left-width: 4px;
+  border-left-color: green;
+}

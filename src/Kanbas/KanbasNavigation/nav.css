@@ -1,0 +1,89 @@
+@media (max-width: 767px) {
+  .pos-black-navbar {
+    height: 60px; /* Set a different height for screens smaller than "sm" */
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .home-main-content {
+    margin-left: 12px;
+  }
+}
+
+.pos-black-navbar {
+  position: fixed;
+  padding: 5px;
+  background-color: black;
+  height: 100%;
+}
+
+.pos-black-navbar .nav-link:hover {
+  background-color: white;
+  color: red !important;
+}
+
+.pos-black-navbar .nav-item {
+  margin: 10px;
+}
+
+.pos-black-navbar .nav-link {
+  padding: 10px;
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+.pos-black-navbar .nav-link.active {
+  background-color: white !important;
+  color: red !important;
+}
+
+.pos-black-navbar .fa-icon {
+  text-align: center;
+  font-size: 30px;
+  color: red;
+}
+
+.pos-black-navbar .white-selected {
+  color: white;
+}
+
+.pos-black-navbar .no-border {
+  border: none;
+  width: 200px;
+}
+
+.active {
+  background-color: white;
+  color: red;
+}
+
+.active-item .nav-link {
+  color: black;
+  padding: 5px;
+  border-left: 3px solid black;
+}
+
+.btn-gray {
+  background-color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: red;
+}
+
+.list-group-item .nav-link .fa-icon {
+  margin-left: 10px;
+  color: black;
+  float: right;
+}
+
+.logo {
+  height: 5rem;
+  margin: 0 auto;
+}
+
+.fa-solid {
+  align-items: center;
+}
