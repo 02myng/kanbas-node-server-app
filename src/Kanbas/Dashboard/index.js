@@ -17,8 +17,12 @@ function Dashboard({
       <hr />
       <h3>Published Courses (3)</h3>
       <hr />
-      <button onClick={updateCourse}>Update</button>
-      <button onClick={addNewCourse}>Add</button>
+      <button className="btn btn-primary" onClick={updateCourse}>
+        Update
+      </button>
+      <button className="btn btn-success" onClick={addNewCourse}>
+        Add
+      </button>
       <h5>Course</h5>
       <input
         value={course.name}
@@ -58,7 +62,7 @@ function Dashboard({
               className="list-group-item"
             >
               <button
-                className="btn btn-primary"
+                className="btn btn-danger"
                 onClick={(event) => {
                   event.preventDefault();
                   deleteCourse(course._id);
