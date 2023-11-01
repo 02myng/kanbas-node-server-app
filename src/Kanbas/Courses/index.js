@@ -1,4 +1,5 @@
-import db from "../../Kanbas/Database";
+import db from "../Database";
+import { useState } from "react";
 import { Link, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import CourseNavigation from "./CourseNavigation";
@@ -8,9 +9,9 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="courses">
       <div className="row mt-3 ms-0">

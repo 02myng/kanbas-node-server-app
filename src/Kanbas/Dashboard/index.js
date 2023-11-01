@@ -3,33 +3,14 @@ import db from "../Database";
 import "./dashboard.css";
 import { React, useState } from "react";
 
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
-  const [course, setCourse] = useState({
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-  });
-  const deleteCourse = (courseId) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
-
-  const addNewCourse = () => {
-    setCourses([...courses, { ...course, _id: new Date().getTime() }]);
-  };
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        } else {
-          return c;
-        }
-      })
-    );
-  };
-
+function Dashboard({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse,
+}) {
   return (
     <div style={{ marginLeft: "30px", marginTop: "30px" }}>
       <h1>Dashboard</h1>
