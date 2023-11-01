@@ -1,4 +1,5 @@
 import ModuleList from "./ModuleList";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,

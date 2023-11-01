@@ -1,34 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { VscGripper } from "react-icons/vsc";
-import { BiCaretDown } from "react-icons/bi";
-import db from "../../Database";
-import "./index.css";
-
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
   return (
-    <div>
+    <ul className="list-group">
+      <li className="list-group-item">
+        <button
+          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+        >
+          Add
+        </button>
+        <button onClick={() => dispatch(updateModule(module))}>Update</button>
+        <input
+          value={module.name}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, name: e.target.value }))
+          }
+        />
+        <textarea
+          value={module.description}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, description: e.target.value }))
+          }
+        />
+      </li>
       {modules
         .filter((module) => module.course === courseId)
         .map((module, index) => (
-          <div key={index} className="list-group modules mt-4">
-            <li className="list-group-item module-title">
-              <VscGripper size="20" />
-              <BiCaretDown size="10" />
-              {module.name} {module.description}
-            </li>
-            {module.lessons &&
-              module.lessons.map((lesson, index) => (
-                <li key={index} className="list-group-item border-left-active">
-                  <VscGripper size="20" />
-                  {lesson.name}
-                </li>
-              ))}
-          </div>
+          <li key={index} className="list-group-item">
+            <button onClick={() => dispatch(setModule(module))}>Edit</button>
+            <button onClick={() => dispatch(deleteModule(module._id))}>
+              Delete
+            </button>
+            <h3>{module.name}</h3>
+            <p>{module.description}</p>
+          </li>
         ))}
-    </div>
+    </ul>
   );
 }
 export default ModuleList;
