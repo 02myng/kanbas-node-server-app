@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { VscGripper } from "react-icons/vsc";
+import { BiCaretDown } from "react-icons/bi";
+
 import {
   addModule,
   deleteModule,
@@ -16,11 +19,17 @@ function ModuleList() {
     <ul className="list-group">
       <li className="list-group-item">
         <button
+          className="btn btn-success"
           onClick={() => dispatch(addModule({ ...module, course: courseId }))}
         >
           Add
         </button>
-        <button onClick={() => dispatch(updateModule(module))}>Update</button>
+        <button
+          className="btn btn-primary"
+          onClick={() => dispatch(updateModule(module))}
+        >
+          Update
+        </button>
         <input
           value={module.name}
           onChange={(e) =>
@@ -38,10 +47,22 @@ function ModuleList() {
         .filter((module) => module.course === courseId)
         .map((module, index) => (
           <li key={index} className="list-group-item">
-            <button onClick={() => dispatch(setModule(module))}>Edit</button>
-            <button onClick={() => dispatch(deleteModule(module._id))}>
-              Delete
-            </button>
+            <VscGripper size="20" />
+            <BiCaretDown size="10" />
+            <div class="float-end">
+              <button
+                className="btn btn-success"
+                onClick={() => dispatch(setModule(module))}
+              >
+                Edit
+              </button>
+              <button
+                className="btn btn-danger"
+                onClick={() => dispatch(deleteModule(module._id))}
+              >
+                Delete
+              </button>
+            </div>
             <h3>{module.name}</h3>
             <p>{module.description}</p>
           </li>
